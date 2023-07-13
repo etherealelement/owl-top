@@ -1,0 +1,30 @@
+.paragraph {
+  color: #3B434E;
+  line-height: 29px;
+
+
+  &__big {
+    font-size: 18px;
+    line-height: 29px;
+  }
+
+  &__medium {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__small {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__bold {
+    font-weight: 700;
+    font-size: 20px;
+
+    &_small {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}
