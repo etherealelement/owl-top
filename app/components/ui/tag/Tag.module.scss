@@ -9,6 +9,16 @@
     background: #DE0000;
   }
 
+
+  &__ghost {
+    color: #FFF;
+    border-radius: 20px;
+    background-color: #B3C0D9;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 10px;
+  }
+
   &__green {
     color: #1DC37E;
     font-size: 12px;

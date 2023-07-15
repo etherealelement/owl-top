@@ -1,0 +1,32 @@
+.header {
+  margin-top: 40px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    display: flex;
+    gap: 19px;
+    align-items: center;
+  }
+
+
+  &__sort {
+    display: flex;
+    align-items: center;
+    gap: 43px;
+
+    &_rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    &_price {
+      cursor: pointer;
+    }
+  }
+}
