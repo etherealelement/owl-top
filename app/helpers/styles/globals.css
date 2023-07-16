@@ -18,7 +18,7 @@ body {
 
 :root {
     --black: #3B434E;
-    --gray-light: #EBEBEB;
+    --gray-light: rgba(235, 235, 235, 0.66);
     --ghost-hover: #e5e2e2;
     --white: #ffff;
     --primary: #7653FC;
