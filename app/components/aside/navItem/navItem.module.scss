@@ -1,0 +1,96 @@
+.nav {
+  margin-top: 29px;
+
+  &__item {
+
+    &_container {
+      cursor: pointer;
+    }
+
+    max-width: 125px;
+    &_list {
+      position: relative;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        content: "";
+        min-height: 100%;
+        width: 1px;
+        background-color: #DFDFDF;
+      }
+
+
+      &_courses {
+        margin-top: 22px;
+        margin-left: 44px;
+
+        li {
+          margin-bottom: 13px;
+          color: #787D85;
+          font-size: 14px;
+          font-weight: 600;
+          transition: all .3s;
+          cursor: pointer;
+          &:hover {
+            color: var(--primary)
+          }
+        }
+
+        h3 {
+          margin-bottom: 10px;
+          color: #787D85;
+          font-size: 12px;
+          font-weight: 300;
+          cursor: pointer;
+          transition: all .3s;
+          &:hover {
+            color: rgba(193, 193, 194, 0.9);
+          }
+        }
+      }
+    }
+
+    &_container {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      &_spn {
+        display: block;
+        height: 24px;
+        width: 24px;
+
+        &_gr {
+          background-image: url("/graduation-hat.svg");
+        }
+
+        &_serv {
+          background-image: url("/cloud-image.svg");
+        }
+
+        &_book {
+            background-image: url("/book.svg");
+          }
+
+        &_prod {
+          background-image: url("/product.svg");
+        }
+      }
+
+      &_title {
+        color: #787D85;
+        font-size: 18px;
+        font-weight: 600;
+        transition: all .3s;
+        &:hover {
+          color: var(--primary);
+        }
+
+        &:focus {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #F5F6F8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+:root {
+    --black: #3B434E;
+    --gray-light: rgba(235, 235, 235, 0.66);
+    --ghost-hover: #e5e2e2;
+    --white: #ffff;
+    --primary: #7653FC;
+    --primary-hover: #7253ec;
+    --red: #DE0000;
+    --green: #1DC37E;
+    --grenn-light: #C8F8E4;
+    --font-famile: "Noto Sans", sans-serif;
+}
