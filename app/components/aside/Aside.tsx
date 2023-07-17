@@ -2,9 +2,10 @@ import {FC} from 'react';
 import styles from "./Aside.module.scss";
 import {TextField} from "@mui/material";
 import {NavItem} from "@/app/components/aside/navItem/navItem";
+import {AsideProps} from "@/app/components/aside/Aside.props";
 
-export const Aside: FC = () => {
-    return <aside className={styles.aside}>
+export const Aside: FC<AsideProps> = ({...props}: AsideProps): JSX.Element => {
+    return <aside className={styles.aside} {...props}>
         <div className={styles.aside__inner}>
             <div className={styles.aside__box}>
                 <svg width="41" height="38" viewBox="0 0 41 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +36,10 @@ export const Aside: FC = () => {
 
             <nav className={styles.nav}>
                 <ul className={styles.nav__list}>
-                    <NavItem></NavItem>
+                    <NavItem courseName={"Курсы"}></NavItem>
+                    <NavItem courseName={"Сервисы"}></NavItem>
+                    <NavItem courseName={"Книги"}></NavItem>
+                    <NavItem courseName={"Товары"}></NavItem>
                 </ul>
             </nav>
         </div>

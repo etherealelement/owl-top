@@ -2,9 +2,13 @@
   margin-top: 29px;
 
   &__item {
+
+    &_container {
+      cursor: pointer;
+    }
+
     max-width: 125px;
     &_list {
-      border-left: 1px solid #DFDFDF;
       position: relative;
       &:before {
         position: absolute;
@@ -31,10 +35,6 @@
           &:hover {
             color: var(--primary)
           }
-
-          &:last-child {
-            margin-bottom: 0px;
-          }
         }
 
         h3 {
@@ -55,16 +55,41 @@
       display: flex;
       gap: 20px;
       align-items: center;
+
       &_spn {
-        background-image: url("/graduation-hat.svg");
         display: block;
         height: 24px;
         width: 24px;
+
+        &_gr {
+          background-image: url("/graduation-hat.svg");
+        }
+
+        &_serv {
+          background-image: url("/cloud-image.svg");
+        }
+
+        &_book {
+            background-image: url("/book.svg");
+          }
+
+        &_prod {
+          background-image: url("/product.svg");
+        }
       }
+
       &_title {
-        color: #7653FC;
+        color: #787D85;
         font-size: 18px;
         font-weight: 600;
+        transition: all .3s;
+        &:hover {
+          color: var(--primary);
+        }
+
+        &:focus {
+          color: var(--primary);
+        }
       }
     }
   }

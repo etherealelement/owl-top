@@ -1,11 +1,11 @@
 import { FC } from 'react';
-import styles from "./Header.module.scss";
-import {HeaderProps} from "@/app/components/header/Header.props";
+import styles from "./Body.module.scss";
+import {BodyProps} from "@/app/components/Body/Body.props";
 import {Tag} from "@/app/components/ui/tag/Tag";
 import {Htag} from "@/app/components/ui/htag/Htag";
 import {Ptag} from "@/app/components/ui/ptag/Ptag";
 
-export const Header: FC<HeaderProps> = ({children, counter, ...props}:HeaderProps):JSX.Element => {
+export const Body: FC<BodyProps> = ({children, counter, ...props}:BodyProps):JSX.Element => {
     return <header className={styles.header} {...props}>
        <div className="container">
            <div className={styles.header__inner}>
