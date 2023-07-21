@@ -18,5 +18,5 @@ export default function Home() {
             <Footer className={styles.wrapper__footer} privacyPolicy={"Политика конфиденциальности"} rightsReserved={"OwlTop © 2020 - 2021 Все права защищены"}
                     userAgreement={"Пользовательское соглашение"}></Footer>
         </div>
-    )
+    );
 }
