@@ -1,38 +1,41 @@
-"use client";
-import {FC, useState} from 'react';
+import {FC, useContext, useState} from 'react';
 import styles from "./navItem.module.scss";
 import {NavItemProps} from "@/app/components/aside/navItem/navItem.props";
 import cn from "classnames";
 import Link from "next/link";
+import { MenuContext } from '@/app/context/menuContext';
 
-const courseData: string[] = ['Photoshop', 'AfterEffect', 'Illustrator', 'Figma'];
+
 export const NavItem: FC<NavItemProps> = ({courseName}:NavItemProps):JSX.Element => {
 
+    // ui state changes
+    const [visible, setVisible] = useState<boolean>(false);
+    const [visibleCategory, setvisibleCategory] = useState<boolean>(true);
 
-    const [visibleDesign, setVisibleDesign] = useState<boolean>(false)
-    const [visibleDev, setVisibleDev] = useState<boolean>(false)
-    const [visibleAnalytics, setVisibleAnalytics] = useState<boolean>(false)
-    const [visiblePopup, setVisiblePopup] = useState<boolean>(true);
+    const handleVisibleCategory = () => {
+        setvisibleCategory(() => !visibleCategory);
+    };
+
+    const handleVisible = (e:any): void => {
+        console.log(e.currentTarget);
+        if(e.target) {
+            setVisible(() => !visible);
+        }
+    };
+
+    // menuData
+    const menu = useContext(MenuContext);
+
+    const [pages] = menu;
+    const pagesData = pages.pages;
 
     const listItem:JSX.Element = ( <div className={styles.nav__item_list}>
-        <ul className={styles.nav__item_list_courses}>
-            <h3 onClick={() => setVisibleDesign(!visibleDesign)}>ДИЗАЙН</h3>
-            {visibleDesign ? courseData.map((item, index) =>
-                <li key={index}>{item}</li>
+        {menu.map((item: any) => <ul className={styles.nav__item_list_courses}>
+            <h3 onClick={handleVisible}>{item._id.secondCategory}</h3>
+            {visible ? pagesData.map((item:any) =>
+                <li key={item._id}>{item.category}</li>
             ) : null}
-        </ul>
-        <ul className={styles.nav__item_list_courses}>
-            <h3 onClick={() => setVisibleDev(!visibleDev)}>РАЗРАБОТКА</h3>
-            {visibleDev ? courseData.map((item, index) =>
-                <li key={index}>{item}</li>
-            ) : null}
-        </ul>
-        <ul className={styles.nav__item_list_courses}>
-            <h3 onClick={() => setVisibleAnalytics(!visibleAnalytics)}>АНАЛИТИКА</h3>
-            {visibleAnalytics ? courseData.map((item, index) =>
-                <li key={index}>{item}</li>
-            ) : null}
-        </ul>
+        </ul>)}
     </div>);
 
 
@@ -40,7 +43,7 @@ export const NavItem: FC<NavItemProps> = ({courseName}:NavItemProps):JSX.Element
 
     return <>
         <li className={styles.nav__item}>
-            <div className={styles.nav__item_container} onClick={() => setVisiblePopup(!visiblePopup)}>
+            <div className={styles.nav__item_container} onClick={handleVisibleCategory}>
                   <span className={cn(styles.nav__item_container_spn, {
                       [styles.nav__item_container_spn_gr]: courseName === "Курсы",
                       [styles.nav__item_container_spn_serv]: courseName === "Сервисы",
@@ -49,7 +52,7 @@ export const NavItem: FC<NavItemProps> = ({courseName}:NavItemProps):JSX.Element
                   })}></span>
                   <Link href={"#"} className={styles.nav__item_container_title}>{courseName}</Link>
             </div>
-            {visiblePopup && listItem}
+            {visibleCategory && listItem}
         </li>
     </>;
 };

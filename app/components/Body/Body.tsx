@@ -6,6 +6,9 @@ import {Htag} from "@/app/components/ui/htag/Htag";
 import {Ptag} from "@/app/components/ui/ptag/Ptag";
 
 export const Body: FC<BodyProps> = ({children, counter, ...props}:BodyProps):JSX.Element => {
+    
+
+
     return <header className={styles.header} {...props}>
        <div className="container">
            <div className={styles.header__inner}>
