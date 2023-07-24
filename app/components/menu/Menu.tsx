@@ -23,6 +23,8 @@ export const Menu: FC =  () => {
     const [menu, setMenu] =useState<MenuItem[]>([]);
     const [isId, setIsId] = useState<number>(0);
 
+
+
     useEffect(() => { 
         const getData = async () => {
             const res = await getMenu(0);
@@ -44,6 +46,7 @@ export const Menu: FC =  () => {
                         <span className={styles.menu__firstLevel_spn}>{item.name}</span>
                     </div>
                 </div>
+                {/* {opened && buildSecondLevel()} */}
                 {item.id === isId && buildSecondLevel()}
             </div>)}
             </>
@@ -52,9 +55,9 @@ export const Menu: FC =  () => {
 
     const buildSecondLevel = () => {
         return (      
-            <>
-             {menu.map((item, index) => <div key={index}>{item._id.secondCategory}</div>)}
-            </>         
+            <div className={styles.menu__secondCategory}>
+             {menu.map((item, index) => <div key={index} className={styles.menu__secondCategory_item}>{item._id.secondCategory}</div>)}
+            </div>         
         );
     };
 
