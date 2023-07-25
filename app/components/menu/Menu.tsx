@@ -41,12 +41,16 @@ const firstLevelMenu: FirstLevelMenuItem[] = [
 ];
 
 export const Menu: FC = () => {
+
+    // change state menu
+
 	const [menu, setMenu] = useState<MenuItem[]>([]);
 	const [isId, setIsId] = useState<null | number>(null);
     const [secondId, setSecondId] = useState<null | number>(null);
     const [openedMenu, setOpenedMenu] = useState<boolean>(false);
     const [opened, setOpened] = useState<boolean>(false);
 
+    // fetch data
 
 	useEffect(() => {
 		const getData = async () => {
@@ -55,12 +59,7 @@ export const Menu: FC = () => {
 		};
 		getData();
 	}, []);
-
-	// console.log(menu);
-
-	const menuPages = menu.map((item) => item.pages);
-	console.log(menuPages);
-
+    
 	const buildFirstLevel = () => {
 		return (
 			<>
