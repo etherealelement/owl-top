@@ -2,6 +2,38 @@
     margin-top: 30px;
 
 
+    &__secondCategory {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 22px;
+        margin-bottom: 30px;
+        padding-left: 43px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background: #DFDFDF;
+            top: 0;
+            left: 11px;
+        }
+
+        &_item {
+            cursor: pointer;
+            color: #787D85;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 13px;
+            transition: all .3s;
+            &:hover {
+                color: #b7beca;
+            }
+        }
+    }
+
     &__firstLevel {
         overflow: hidden;
         display: flex;
@@ -17,5 +49,21 @@
                 color: var(--primary);
             }
         }
+    }
+
+    &__thirdlevel {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    &_item {
+        font-weight: 600;
+        font-size: 14px;
+        color: #787D85;
+        transition: all .3s;
+        &:hover {
+            color: #7653FC;
+            font-size: 14px;
+        }
+    }
     }
 }

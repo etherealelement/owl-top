@@ -5,8 +5,7 @@ import Link from "next/link";
 import { Menu } from "../export";
 import Image from "next/image";
 import LogoIcon from "./icons/logo.svg";
-import { TextField } from "@mui/material";
-import SearchIcon from "./icons/search.svg";
+import { Search } from "../search/Search";
 export const Sidebar: FC<SidebarProps> = ({
 	...props
 }: SidebarProps): JSX.Element => {
@@ -18,15 +17,10 @@ export const Sidebar: FC<SidebarProps> = ({
 				<p className={styles.sidebar__logo_sub}>top</p>
 			</Link>
 
-			<div className={styles.sidebar__box}>
-				<TextField
-					id="outlined-basic"
-					label="Поиск..."
-					variant="outlined"
-					size="small"
-				/>
-			</div>
-
+			<Search
+				label="Поиск..."
+				sizeInput="small"
+			></Search>
 			<Menu></Menu>
 		</aside>
 	);
