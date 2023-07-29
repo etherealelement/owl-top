@@ -37,6 +37,7 @@ export const ProductHeading: FC<ProductHeadingProps> = ({
 							rx="1.5"
 							fill="#7653FC"
 						/>
+
 					</svg>
 					<Ptag type="bold_small">По рейтингу</Ptag>
 				</div>
