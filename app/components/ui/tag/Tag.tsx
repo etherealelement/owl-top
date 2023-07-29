@@ -7,6 +7,7 @@ export const Tag: FC<TagProps> = ({children, variant}: TagProps): JSX.Element =>
         [styles.tag__red]: variant === "red",
         [styles.tag__violet]: variant === "violet",
         [styles.tag__green]: variant === "green",
-        [styles.tag__ghost]: variant === "ghost"
+        [styles.tag__ghost]: variant === "ghost",
+        [styles.tag__white]: variant === "white"
     })}>{children}</span>;
 };

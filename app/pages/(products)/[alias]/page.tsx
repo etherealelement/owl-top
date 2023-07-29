@@ -6,6 +6,6 @@ export const metadata:Metadata = {
 };
 
 
-export default function Product({params} : {params: {alias: string}}):JSX.Element {
-    return <div> Страница с {params.alias}</div>;
+export default function Product():JSX.Element {
+    return <div> Страница </div>;
 }

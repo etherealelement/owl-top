@@ -7,7 +7,6 @@ import BooksIcon from "./icons/books.svg";
 import ProductsIcon from "./icons/products.svg";
 import React from "react";
 import Image from "next/image";
-import cn from "classnames";
 import styles from "./Menu.module.scss";
 import { getMenu } from "@/app/API/menu";
 import Link from "next/link";
@@ -49,6 +48,9 @@ export const Menu: FC = () => {
     const [secondId, setSecondId] = useState<null | number>(null);
     const [openedMenu, setOpenedMenu] = useState<boolean>(false);
     const [opened, setOpened] = useState<boolean>(false);
+
+
+console.log(menu);
 
     // fetch data
 
@@ -98,8 +100,8 @@ export const Menu: FC = () => {
                     }}>
 						<div key={index} className={styles.menu__secondCategory_item}>
 							{item._id.secondCategory}
-						</div>
 
+						</div>
                         { index === secondId && opened ? buildThirdLevel(item.pages, menuItem.route) : null}
 					</div>
 				))}
@@ -111,7 +113,7 @@ export const Menu: FC = () => {
 		return (
 			<div className={styles.menu__thirdlevel}>
 				{pages.map((item, index) => <Link 
-                href={`/${route}`}
+                href={`/${item.alias}`}
                 key={index}
                 className={styles.menu__thirdlevel_item}
                 >{item.category}</Link>)}
