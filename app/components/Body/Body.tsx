@@ -3,6 +3,7 @@ import styles from "./Body.module.scss";
 import {BodyProps} from "@/app/components/Body/Body.props";
 import { ProductHeading } from '../productsContent/productHeading/productHeading';
 import {ProductInfo} from "@/app/components/productsContent/productInfo/productInfo";
+import {ProductComments} from "@/app/components/productsContent/productComments/ProductComments";
 
 export const Body: FC<BodyProps> = ({children, counter, ...props}:BodyProps):JSX.Element => {
     
@@ -24,5 +25,10 @@ export const Body: FC<BodyProps> = ({children, counter, ...props}:BodyProps):JSX
             reviews={20}
             warranty={true}
             >Профессия дизайнер от 0 до PRO</ProductInfo>
+        <ProductComments
+            date={"10 марта 2021"}
+            userFeedback={"Напишу сразу в двух курсах, так как проходил оба. Java будет многим непросвещённым сложновата в изучении, но здесь перевес из-за лидирующего положения языка как самого популярного в программировании. Выбор мой пал на эту профессию еще и потому, что Java-разработчики получают самую большую зарплату. Хотя Python начинает догонять Java по многим моментам, но вот в крупном екоме разработке Джава все-таки остается главенствующей сейчас. Скажу так – полнота программы и интенсивность присуща обоим курсам GeekBrains. Хочу отметить, что с первого дня занятий вы приступаете к практике и получаете опыт коммерческой разработки уже в свое резюме. Скажу вам как прошедший это – реально помогло в трудоустройстве!"}
+            userName={"Василий Раганов"}
+        ></ProductComments>
     </header>;
 };
