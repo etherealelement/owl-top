@@ -1,0 +1,62 @@
+.reviews {
+  border-radius: 5px;
+  background: #F9F8FF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+
+    &_user{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &_rating {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+  }
+
+  &__content {
+    margin-top: 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EBEBEB;
+  }
+
+  &__feedback {
+    margin-top: 30px;
+
+    &_form {
+
+
+      &_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        &_input {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+        }
+
+        &_rating {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+      }
+    }
+  }
+
+  &__send {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+}
