@@ -66,5 +66,5 @@ export const Body: FC<BodyProps> = ({children, counter, ...props}: BodyProps): J
         <ProductAdvantages
             advantagesContent={advantagesContent}
         ></ProductAdvantages>
-    </header>;
+    </header>
 };
