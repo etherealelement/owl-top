@@ -6,6 +6,8 @@ import {ProductInfo} from "@/app/components/productsContent/productInfo/productI
 import {ProductComments} from "@/app/components/productsContent/productComments/ProductComments";
 import {ProductVacancy} from "@/app/components/productsContent/productVacancy/ProductVacancy";
 import {ProductAdvantages} from "@/app/components/productsContent/productAdvantages/ProductAdvantages";
+import {ProductsSkills} from "@/app/components/productsContent/productsSkills/ProductsSkills";
+import {TSkills} from "@/app/components/productsContent/productsSkills/ProductsSkills.props";
 
 export const Body: FC<BodyProps> = ({children, counter, ...props}: BodyProps): JSX.Element => {
     const advantagesContent: {
@@ -33,6 +35,31 @@ export const Body: FC<BodyProps> = ({children, counter, ...props}: BodyProps): J
             description: "Пользователи сети, которые знают Photoshop, не обязательно должны выполнять одну работу. Профессия графического дизайнера дает возможность отойти от обычных проектов и повысить скил в других компьютерных программах."
         }
     ];
+
+    const skillsData:TSkills[] = [
+        {
+        id: 0,
+        skillName: "Работа в Photoshop"
+        },
+        {
+            id: 1,
+            skillName: "Подготовка макетов"
+        },
+        {
+          id: 3,
+          skillName: "Графический дизайн"
+        },
+        {
+            id: 4,
+            skillName: "Web дизайн"
+        },
+        {
+            id: 5,
+            skillName: "Дизайн сайтов"
+        }
+
+    ];
+
 
     return <header className={styles.header} {...props}>
         <ProductHeading title={"Курсы по фотошоп"} coursesCount={10}></ProductHeading>
@@ -66,5 +93,8 @@ export const Body: FC<BodyProps> = ({children, counter, ...props}: BodyProps): J
         <ProductAdvantages
             advantagesContent={advantagesContent}
         ></ProductAdvantages>
-    </header>;
+        <ProductsSkills
+            skills={skillsData}
+        ></ProductsSkills>
+    </header>
 };
