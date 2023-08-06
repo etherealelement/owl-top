@@ -4,3 +4,4 @@ export interface SearchProps extends DetailedHTMLProps<HTMLAttributes<HTMLInputE
     label: string;
     sizeInput: "medium" | "small";
 }
+

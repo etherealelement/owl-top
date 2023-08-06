@@ -1,4 +1,4 @@
-import {Metadata} from "next";
+ import {Metadata} from "next";
 import {Body} from "@/app/components/Body/Body";
 import {Footer} from "@/app/components/footer/Footer";
 import styles from "./page.module.scss";

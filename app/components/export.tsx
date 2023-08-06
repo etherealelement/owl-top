@@ -6,3 +6,4 @@ export * from "./footer/Footer";
 export * from "@/app/components/Body/Body";
 export * from "@/app/components/menu/Menu";
 export * from "@/app/components/search/Search";
+export * from "./Sort/Sort";

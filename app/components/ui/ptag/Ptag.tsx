@@ -11,6 +11,7 @@ export const Ptag: FC<PtagProps> = ({type, children}: PtagProps ): JSX.Element =
             [styles.paragraph__small]: type === "small",
             [styles.paragraph__bold]: type === "bold",
             [styles.paragraph__bold_small]: type === "bold_small",
+            [styles.paragraph__bold_small_sort]: type === "bold_small_sort",
         })}>{children}</p>
     </>;
 };
